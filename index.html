@@ -18,19 +18,29 @@
         text-align: center;
       }
 
-      img {
-        width: 150px;
+      .logo-title {
+        display: flex;
+        align-items: center;
+        gap: 15px;
+        justify-content: center;
         margin-bottom: 20px;
       }
 
-      h1 {
+      .logo-title img {
+        width: 40px;
+        height: 40px;
+      }
+
+      .logo-title h1 {
         font-size: 2.5rem;
         margin: 0;
+        font-weight: bold;
       }
 
       p {
         font-size: 1.1rem;
         color: #aaa;
+        margin-top: 10px;
       }
 
       footer {
@@ -51,8 +61,10 @@
     </style>
   </head>
   <body>
-    <img src="logo.png" alt="Web3Across Logo" />
-    <h1>Web3Across is Coming Soon</h1>
+    <div class="logo-title">
+      <img src="logo.png" alt="Web3Across Logo" />
+      <h1>Web3Across is Coming Soon</h1>
+    </div>
     <p>Your gateway to Web3 PR, marketing, and design.</p>
 
     <footer>
