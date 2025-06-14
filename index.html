@@ -1,110 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Web3Across – Coming Soon</title>
-    <style>
-      body {
-        margin: 0;
-        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        background-color: #000;
-        color: #fff;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        padding: 0 20px;
-        text-align: center;
-      }
-
-      .headline {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 6px;
-        max-width: 100%;
-        margin-bottom: 10px;
-      }
-
-      .logo-title {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 10px;
-      }
-
-      .logo-title img {
-        width: 40px;
-        height: 40px;
-        object-fit: contain;
-      }
-
-      .logo-title span {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-
-      .second-line {
-        font-size: 2rem;
-        font-weight: bold;
-      }
-
-      p {
-        font-size: 1rem;
-        color: #aaa;
-        margin-top: 10px;
-      }
-
-      footer {
-        position: absolute;
-        bottom: 20px;
-        font-size: 0.9rem;
-        color: #ccc;
-      }
-
-      a {
-        color: #00e5e5;
-        text-decoration: none;
-      }
-
-      a:hover {
-        text-decoration: underline;
-      }
-
-      /* Mobile responsiveness */
-      @media (max-width: 600px) {
-        .logo-title img {
-          width: 32px;
-          height: 32px;
-        }
-
-        .logo-title span,
-        .second-line {
-          font-size: 1.5rem;
-        }
-
-        p {
-          font-size: 0.95rem;
-        }
-      }
-    </style>
-  </head>
-  <body>
-    <div class="headline">
-      <div class="logo-title">
-        <img src="logo.png" alt="Web3Across Logo" />
-        <span>Web3Across</span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Web3Across | Coming Soon</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="heading">
+      <img src="logo.png" alt="Web3Across Logo" class="logo" />
+      <div class="title">
+        <span class="line-1">Web3Across</span>
+        <span class="line-2">is Coming Soon</span>
       </div>
-      <div class="second-line">is Coming Soon</div>
     </div>
 
-    <p>Your gateway to Web3 PR, marketing, and design.</p>
-
-    <footer>
+    <p class="tagline">Your gateway to Web3 PR, marketing, and design.</p>
+    <p class="email">
       Contact us at:
       <a href="mailto:contact@web3across.com">contact@web3across.com</a>
-    </footer>
-  </body>
+    </p>
+  </div>
+</body>
 </html>
