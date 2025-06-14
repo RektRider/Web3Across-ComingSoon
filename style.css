@@ -16,7 +16,7 @@ body {
   padding: 20px;
 }
 
-.logo-heading {
+.heading {
   display: flex;
   align-items: center;
   gap: 10px;
@@ -29,19 +29,24 @@ body {
   height: 40px;
 }
 
-.site-title {
+.main-title {
   font-size: 28px;
   font-weight: bold;
   margin: 0;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
 }
 
-.coming-soon {
-  font-size: 28px;
-  font-weight: bold;
-  margin: 10px 0 0 0;
+/* Mobile: break title into two lines */
+@media (max-width: 600px) {
+  .main-title {
+    flex-direction: column;
+    text-align: center;
+  }
 }
 
-/* Subtitle and contact */
+/* Subtitle and contact styling */
 .subtitle {
   margin-top: 16px;
   font-size: 14px;
@@ -61,33 +66,4 @@ body {
 
 .contact a:hover {
   text-decoration: underline;
-}
-
-/* On desktop: put everything in one line */
-@media (min-width: 601px) {
-  .logo-heading {
-    flex-direction: row;
-  }
-
-  .logo-heading::after {
-    content: " is Coming Soon";
-    font-size: 28px;
-    font-weight: bold;
-    margin-left: 8px;
-  }
-
-  .coming-soon {
-    display: none;
-  }
-}
-
-/* On mobile: stack */
-@media (max-width: 600px) {
-  .logo-heading {
-    flex-direction: row;
-  }
-
-  .coming-soon {
-    display: block;
-  }
 }
