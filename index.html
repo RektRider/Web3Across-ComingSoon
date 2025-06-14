@@ -15,37 +15,46 @@
         justify-content: center;
         align-items: center;
         height: 100vh;
-        text-align: center;
         padding: 0 20px;
+        text-align: center;
+      }
+
+      .headline {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 6px;
+        max-width: 100%;
+        margin-bottom: 10px;
       }
 
       .logo-title {
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 12px;
-        flex-wrap: nowrap;
-        white-space: nowrap;
-        overflow: hidden;
-        max-width: 100%;
+        gap: 10px;
       }
 
       .logo-title img {
-        width: 32px;
-        height: 32px;
+        width: 40px;
+        height: 40px;
         object-fit: contain;
       }
 
-      .logo-title h1 {
-        font-size: 1.8rem;
-        margin: 0;
+      .logo-title span {
+        font-size: 2rem;
+        font-weight: bold;
+      }
+
+      .second-line {
+        font-size: 2rem;
         font-weight: bold;
       }
 
       p {
         font-size: 1rem;
         color: #aaa;
-        margin: 20px 0;
+        margin-top: 10px;
       }
 
       footer {
@@ -64,27 +73,33 @@
         text-decoration: underline;
       }
 
-      @media (min-width: 768px) {
-        .logo-title h1 {
-          font-size: 2.5rem;
+      /* Mobile responsiveness */
+      @media (max-width: 600px) {
+        .logo-title img {
+          width: 32px;
+          height: 32px;
         }
 
-        .logo-title img {
-          width: 40px;
-          height: 40px;
+        .logo-title span,
+        .second-line {
+          font-size: 1.5rem;
         }
 
         p {
-          font-size: 1.1rem;
+          font-size: 0.95rem;
         }
       }
     </style>
   </head>
   <body>
-    <div class="logo-title">
-      <img src="logo.png" alt="Web3Across Logo" />
-      <h1>Web3Across is Coming Soon</h1>
+    <div class="headline">
+      <div class="logo-title">
+        <img src="logo.png" alt="Web3Across Logo" />
+        <span>Web3Across</span>
+      </div>
+      <div class="second-line">is Coming Soon</div>
     </div>
+
     <p>Your gateway to Web3 PR, marketing, and design.</p>
 
     <footer>
