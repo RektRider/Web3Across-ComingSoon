@@ -10,53 +10,51 @@ body {
 .container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  height: 100vh;
-  padding: 20px;
+  justify-content: center;
+  padding: 40px 20px;
+  min-height: 100vh;
+}
+
+.top-row {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.logo {
+  width: 48px;
+  height: 48px;
 }
 
 .heading {
   display: flex;
-  align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
-  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
 }
 
-.logo {
-  width: 40px;
-  height: 40px;
-}
-
-.main-title {
-  font-size: 28px;
+.web3 {
+  font-size: 22px;
   font-weight: bold;
-  margin: 0;
-  display: flex;
-  flex-direction: row;
-  gap: 8px;
 }
 
-/* Mobile: break title into two lines */
-@media (max-width: 600px) {
-  .main-title {
-    flex-direction: column;
-    text-align: center;
-  }
+.soon {
+  font-size: 22px;
+  font-weight: bold;
 }
 
-/* Subtitle and contact styling */
 .subtitle {
-  margin-top: 16px;
+  color: #aaa;
   font-size: 14px;
-  color: #bbb;
+  margin: 20px 0;
 }
 
 .contact {
-  margin-top: 40px;
-  font-size: 14px;
   color: #ccc;
+  font-size: 14px;
 }
 
 .contact a {
@@ -66,4 +64,22 @@ body {
 
 .contact a:hover {
   text-decoration: underline;
+}
+
+/* Desktop View */
+@media (min-width: 768px) {
+  .top-row {
+    flex-direction: row;
+  }
+
+  .heading {
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .web3,
+  .soon {
+    display: inline;
+  }
 }
