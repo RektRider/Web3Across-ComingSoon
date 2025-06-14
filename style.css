@@ -3,26 +3,25 @@ body {
   padding: 0;
   background-color: #000;
   color: #fff;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: Arial, sans-serif;
   text-align: center;
 }
 
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   height: 100vh;
-  padding: 0 20px;
+  padding: 20px;
 }
 
-.heading {
+.logo-heading {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 20px;
-  flex-direction: row;
-  flex-wrap: nowrap;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .logo {
@@ -30,54 +29,65 @@ body {
   height: 40px;
 }
 
-.title {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: nowrap;
-  font-size: 2rem;
+.site-title {
+  font-size: 28px;
   font-weight: bold;
+  margin: 0;
 }
 
-.line-1 {
-  margin-right: 8px;
+.coming-soon {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0 0 0;
 }
 
-.line-2 {
-  margin-left: 0;
+/* Subtitle and contact */
+.subtitle {
+  margin-top: 16px;
+  font-size: 14px;
+  color: #bbb;
 }
 
-.tagline {
-  font-size: 1rem;
-  margin: 12px 0;
+.contact {
+  margin-top: 40px;
+  font-size: 14px;
   color: #ccc;
 }
 
-.email a {
-  color: #00e0ff;
+.contact a {
+  color: #00ffff;
   text-decoration: none;
 }
 
-.email a:hover {
+.contact a:hover {
   text-decoration: underline;
 }
 
-/* Mobile styles */
-@media (max-width: 768px) {
-  .heading {
-    flex-direction: column;
+/* On desktop: put everything in one line */
+@media (min-width: 601px) {
+  .logo-heading {
+    flex-direction: row;
   }
 
-  .title {
-    flex-direction: column;
-    align-items: center;
+  .logo-heading::after {
+    content: " is Coming Soon";
+    font-size: 28px;
+    font-weight: bold;
+    margin-left: 8px;
   }
 
-  .line-1,
-  .line-2 {
-    margin: 0;
+  .coming-soon {
+    display: none;
+  }
+}
+
+/* On mobile: stack */
+@media (max-width: 600px) {
+  .logo-heading {
+    flex-direction: row;
   }
 
-  .logo {
-    margin-bottom: 10px;
+  .coming-soon {
+    display: block;
   }
 }
